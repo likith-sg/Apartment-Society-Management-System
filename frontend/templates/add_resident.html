@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Resident</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add Resident</h2>
+        <form action="/add_resident" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="phone_number" placeholder="Phone Number" required>
+            <select name="type">
+                <option value="rental">Rental</option>
+                <option value="lease">Lease</option>
+                <option value="buyer">Buyer</option>
+            </select>
+            <input type="text" name="rent_amount" placeholder="Rent Amount">
+            <input type="text" name="deposit_amount" placeholder="Deposit Amount">
+            <input type="text" name="maintenance_price" placeholder="Maintenance Price" required>
+            <button type="submit">Add Resident</button>
+        </form>
+    </div>
+</body>
+</html>

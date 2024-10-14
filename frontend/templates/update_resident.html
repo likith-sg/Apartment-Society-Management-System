@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Resident</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Update Resident</h2>
+        <form action="/update_resident/{{ resident.reg_no }}" method="POST">
+            <input type="text" name="name" value="{{ resident.name }}" placeholder="Name" required>
+            <input type="text" name="phone_number" value="{{ resident.phone_number }}" placeholder="Phone Number" required>
+            <select name="type">
+                <option value="rental" {% if resident.type == 'rental' %}selected{% endif %}>Rental</option>
+                <option value="lease" {% if resident.type == 'lease' %}selected{% endif %}>Lease</option>
+                <option value="buyer" {% if resident.type == 'buyer' %}selected{% endif %}>Buyer</option>
+            </select>
+            <input type="text" name="rent_amount" value="{{ resident.rent_amount }}" placeholder="Rent Amount">
+            <input type="text" name="deposit_amount" value="{{ resident.deposit_amount }}" placeholder="Deposit Amount">
+            <input type="text" name="maintenance_price" value="{{ resident.maintenance_price }}" placeholder="Maintenance Price" required>
+            <button type="submit">Update Resident</button>
+        </form>
+    </div>
+</body>
+</html>

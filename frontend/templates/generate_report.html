@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Resident Report</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h2>Resident Report</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Resident Name</th>
+                <th>Phone Number</th>
+                <th>Type</th>
+                <th>Rent Amount</th>
+                <th>Deposit Amount</th>
+                <th>Maintenance Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for resident in residents %}
+            <tr>
+                <td>{{ resident.name }}</td>
+                <td>{{ resident.phone_number }}</td>
+                <td>{{ resident.type }}</td>
+                <td>{{ resident.rent_amount }}</td>
+                <td>{{ resident.deposit_amount }}</td>
+                <td>{{ resident.maintenance_price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

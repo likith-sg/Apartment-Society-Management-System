@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residents List</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h2>Residents List</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Type</th>
+            <th>Rent Amount</th>
+            <th>Deposit Amount</th>
+            <th>Maintenance</th>
+        </tr>
+        {% for resident in residents %}
+        <tr>
+            <td>{{ resident.name }}</td>
+            <td>{{ resident.phone_number }}</td>
+            <td>{{ resident.type }}</td>
+            <td>{{ resident.rent_amount }}</td>
+            <td>{{ resident.deposit_amount }}</td>
+            <td>{{ resident.maintenance_price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
