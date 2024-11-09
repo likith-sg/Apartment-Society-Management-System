@@ -26,7 +26,7 @@ The Apartment Society Management System (ASMS) is a comprehensive application de
 ### Clone the Repository:
 
 ```bash
-git clone https://github.com/yourusername/apartment-society-management-system.git
+git clone https://github.com/likith-sg/apartment-society-management-system.git
 cd apartment-society-management-system
 ```
 
